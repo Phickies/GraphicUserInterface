@@ -1,4 +1,6 @@
-// This is an UI design class for future development
+/*
+  Parent UI class
+*/
 
 class User_Interface {
 
@@ -13,7 +15,6 @@ class User_Interface {
   private PFont font = createFont("Roboto-Regular.ttf", this.textSize, true);
   
   User_Interface(){}
-  // For the image parameter, you have to pass function //loadImage("Name of your picture file")
   protected User_Interface(boolean  ellipse, 
                            float    posX, 
                            float    posY, 
@@ -35,6 +36,14 @@ class User_Interface {
     this.image = image;
     this.fillColor = fillColor;
     this.textColor = textColor;
+  }
+  
+  protected void setPosX(float posX){
+    this.posX = posX;
+  }
+  
+  protected void setPosY(float posY){
+    this.posY = posY;
   }
   
   protected void setFillColor(int red, int green, int blue) {
