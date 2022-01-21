@@ -2,7 +2,7 @@
   Slider class
 */
 
-final public class Slider extends User_Interface{
+public class Slider extends User_Interface{
   
   private float barWidth, barHeight, barPosX, barPosY;
   private float minValue, maxValue;
@@ -35,8 +35,27 @@ final public class Slider extends User_Interface{
     this.horizontal = horizontal;
   }
   
+  public void setBarColor(int red, int green, int blue){
+    this.barColor = color(red, green, blue);
+  }
+  
+  public void setBarColor(color newColor){
+    this.barColor = newColor;
+  }
+  
+  public color getBarColor(){
+    return barColor;
+  }
+  
   public void display(){
     fill(barColor);
+    if (horizontal){
+      ellipse(barPosX - barWidth, barPosY, barHeight, barHeight);
+      ellipse(barPosX + barWidth, barPosY, barHeight, barHeight);
+    } else {
+      ellipse(barPosX, barPosY - barHeight, barWidth, barWidth);
+      ellipse(barPosX, barPosY + barHeight, barWidth, barWidth);
+    }
     rect(barPosX, barPosY, barWidth, barHeight);
     fill(barColor);
     super.display();
