@@ -6,7 +6,7 @@ final public class Button extends User_Interface{
   
   private color tempColor;
   private color tempTextColor;
-  private boolean buttonState = true;
+  private boolean buttonState = true, animation = false;
   
   /*
     public void hoverAnimation(int red, int green, int blue);
@@ -31,15 +31,27 @@ final public class Button extends User_Interface{
    }
    
    public void setColor(color newColor){
-     this.tempColor = newColor;
+     if (animation){
+       this.tempColor = newColor;
+     } else {
+       super.setFillColor(newColor);
+     }
    }
    
    public void setColor(int red, int green, int blue){
-     this.tempColor = color(red, green, blue);
+     if (animation){
+       this.tempColor = color(red, green, blue);
+     } else {
+       super.setFillColor(color(red, green, blue));
+     }
    }
    
    public void setTextColor(color newColor){
-     this.tempTextColor = newColor;
+     if (animation){
+       this.tempTextColor = newColor;
+     } else {
+       super.setContentColor(newColor);
+     }
    }
    
    public void setButtonState(boolean state){
@@ -64,6 +76,7 @@ final public class Button extends User_Interface{
        super.setFillColor(this.tempColor);
        super.setContentColor(this.tempTextColor);
      }
+     animation = true;
    }
    
    public boolean isPressed(){
