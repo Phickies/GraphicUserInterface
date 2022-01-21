@@ -4,7 +4,7 @@
 
 class User_Interface {
 
-  private float posX, posY, UIwidth, UIheight;
+  private float posX, posY, UIwidth, UIheight,smoothCorner;
   private String content;
   private boolean ellipse;
   private int textSize = 20;                                          // Default text size
@@ -20,6 +20,7 @@ class User_Interface {
                            float    posY, 
                            float    UIwidth, 
                            float    UIheight,
+                           float    smoothCorner,
                            color    fillColor,
                            String   content, 
                            int      textSize,
@@ -31,6 +32,7 @@ class User_Interface {
     this.posY = posY;
     this.UIwidth = UIwidth;
     this.UIheight = UIheight;
+    this.smoothCorner = smoothCorner;
     this.content = content;
     this.textSize = textSize;
     this.image = image;
@@ -96,7 +98,7 @@ class User_Interface {
     if (isEllipse() != true){
       fill(getFillColor());
       if (image == null) {
-        rect(posX, posY, UIwidth, UIheight);
+        rect(posX, posY, UIwidth, UIheight, smoothCorner);
       } else {
         image(image, posX, posY, UIwidth, UIheight);
       }

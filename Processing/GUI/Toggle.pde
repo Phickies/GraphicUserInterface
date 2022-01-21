@@ -19,7 +19,7 @@ final public class Toggle extends Slider{
                 color    offColor,               // color of the toggle bar when off
                 color    fillColor)              // color of the switch
   {
-    super(true, barPosX, barPosY, barWidth, barWidth, barColor, barWidth, barWidth, fillColor, true);
+    super(true, barPosX, barPosY, barWidth, barWidth, barColor, barWidth, barWidth, 0, fillColor, true);
     this.barPosX = barPosX;
     this.barWidth = barWidth;
     this.offColor = offColor;

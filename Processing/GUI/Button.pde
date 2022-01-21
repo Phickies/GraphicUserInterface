@@ -21,13 +21,14 @@ final public class Button extends User_Interface{
                 float    posY,                    // position of the button on Y axis
                 float    Bwidth,                  // width of the button
                 float    Bheight,                 // height of the button
+                float    smoothCorner,            // smoother the corner of the button
                 color    fillColor,               // color of the button
                 String   content,                 // text on the button (if not pass null)
                 int      textSize,                // size of the text   (if not pass 0)
                 color    textColor,               // color of the text  (if not pass 0)
                 PImage   image)                   // image on the button(if not pass null)
    {
-     super(ellipse, posX, posY, Bwidth, Bheight, fillColor, content, textSize, textColor, image);
+     super(ellipse, posX, posY, Bwidth, Bheight, smoothCorner, fillColor, content, textSize, textColor, image);
      tempColor = super.getFillColor();
      tempTextColor = super.getTextColor();
    }

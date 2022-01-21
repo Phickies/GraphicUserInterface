@@ -25,10 +25,11 @@ public class Slider extends User_Interface{
                 color    barColor,               // color of the slider bar
                 float    Slwidth,                // width of the knob
                 float    Slheight,               // height of the knob
+                float    Slsmooth,               // smoother the knob
                 color    fillColor,              // color of the knob
                 boolean  horizontal)             // horizontal or vertical
   {   
-    super(ellipse, barPosX, barPosY, Slwidth, Slheight, fillColor, null, 0, 0, null);
+    super(ellipse, barPosX, barPosY, Slwidth, Slheight, Slsmooth, fillColor, null, 0, 0, null);
     this.barPosX = barPosX;
     this.barPosY = barPosY;
     this.barWidth = barWidth;
