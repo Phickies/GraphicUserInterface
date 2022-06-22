@@ -6,8 +6,11 @@
   take less time to create your own GUI menu.
   You can copy the code and read the documents inside the class for more descprition and usage
   
+  Please for demonstation, run this file and play with it.
+  If any think go wrong, please email me.
+  
   @Phicks.
-  created on 22-10-2022.
+  created on 22-01-2022.
 */
 
 Button button1, button2, button3; 
