@@ -12,7 +12,8 @@ class User_Interface {
   private color textColor;                                           
   private PImage image;
   
-  private PFont font = createFont("Roboto-Regular.ttf", this.textSize, true);
+  private PFont font = createFont("Roboto-Regular.ttf", this.textSize, true); // You could use any other font, just need to  download the font and paste that into 
+  // the same folder having your main file, or put it into the data folder.
   
   User_Interface(){}
   protected User_Interface(boolean  ellipse, 
